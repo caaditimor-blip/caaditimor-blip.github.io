@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AccountingBee - Chartered Accountant and professional accounting, taxation, GST, bookkeeping and compliance services. Your Finances, Our Expertise.">
+  <meta name="keywords" content="Chartered Accountant, CA, GST, ITR filing, bookkeeping, payroll, EPFO, ESIC, accounting services, AccountingBee, Udaipur">
+  <meta name="author" content="AccountingBee">
+  <title>AccountingBee | Your Finances, Our Expertise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#071a33; --navy2:#0d2a4d; --gold:#d8aa42; --gold2:#f2d27b;
+      --cream:#faf8f2; --white:#fff; --ink:#172235; --muted:#657085;
+      --line:#e7e1d3; --shadow:0 18px 50px rgba(7,26,51,.10);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,26,51,.96);backdrop-filter:blur(12px);color:white;border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.3px}
+    .bee{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);font-size:22px;box-shadow:0 6px 18px rgba(216,170,66,.25)}
+    .brand-name{font-size:22px}.brand small{display:block;color:#d9dce3;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:-3px}
+    .navlinks{display:flex;gap:26px;align-items:center;font-size:14px;color:#e8edf4}
+    .navlinks a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;font-weight:700;border:1px solid transparent;cursor:pointer}
+    .btn-gold{background:var(--gold);color:var(--navy)} .btn-gold:hover{background:var(--gold2)}
+    .btn-outline{border-color:rgba(255,255,255,.35);color:white}.btn-outline:hover{border-color:var(--gold);color:var(--gold2)}
+    .hero{background:radial-gradient(circle at 85% 20%,#19436d 0,#0d2a4d 25%,#071a33 65%);color:white;padding:90px 0 95px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--gold2);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:2px}
+    h1{font-family:"Playfair Display",serif;font-size:clamp(45px,6vw,76px);line-height:1.02;margin:14px 0 20px}
+    .hero p{font-size:18px;color:#dce5ef;max-width:650px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-card{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.22)}
+    .hero-card h3{font-family:"Playfair Display",serif;font-size:28px;margin:0 0 18px}
+    .check{display:flex;gap:10px;margin:14px 0;color:#edf2f7}.check b{color:var(--gold2)}
+    section{padding:80px 0}.soft{background:var(--cream)}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .section-head h2{font-family:"Playfair Display",serif;font-size:42px;line-height:1.1;margin:8px 0 14px;color:var(--navy)}
+    .section-head p{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid var(--line);border-radius:16px;padding:27px;box-shadow:0 8px 30px rgba(7,26,51,.05);transition:.25s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .icon{width:46px;height:46px;border-radius:12px;background:#f7edcf;color:#8a6515;display:grid;place-items:center;font-size:21px;margin-bottom:17px}
+    .card h3{margin:0 0 8px;color:var(--navy);font-size:19px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}
+    .about-panel{background:var(--navy);border-radius:22px;padding:42px;color:white;position:relative;overflow:hidden}
+    .about-panel:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(216,170,66,.35);border-radius:50%;right:-70px;bottom:-70px}
+    .about-panel .big{font-family:"Playfair Display";font-size:58px;color:var(--gold2);line-height:1}
+    .about h2,.contact h2{font-family:"Playfair Display";font-size:42px;color:var(--navy);line-height:1.1;margin:8px 0 18px}
+    .about p{color:var(--muted)}
+    .points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:25px}
+    .point{padding:13px 15px;border-left:3px solid var(--gold);background:#fbfaf6;font-weight:600;font-size:14px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{text-align:center}.num{width:48px;height:48px;border-radius:50%;margin:0 auto 14px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:700}
+    .step h3{font-size:17px;margin:0 0 6px;color:var(--navy)}.step p{font-size:13px;color:var(--muted);margin:0}
+    .cta{background:linear-gradient(135deg,var(--navy),#12385f);color:white;border-radius:24px;padding:55px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta h2{font-family:"Playfair Display";font-size:39px;margin:0 0 8px}.cta p{color:#d9e2ec;margin:0}
+    .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+    .contact-box{background:var(--cream);padding:28px;border-radius:18px}
+    .contact-row{display:flex;gap:14px;margin:19px 0}.contact-row strong{display:block;color:var(--navy)}.contact-row span{color:var(--muted);font-size:14px}
+    form{display:grid;gap:14px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    input,textarea,select{width:100%;padding:14px 15px;border:1px solid #dfe2e6;border-radius:9px;font:inherit;outline:none;background:white}
+    input:focus,textarea:focus,select:focus{border-color:var(--gold)} textarea{min-height:125px;resize:vertical}
+    footer{background:#041326;color:#cbd4df;padding:38px 0 22px}
+    .footer-top{display:flex;justify-content:space-between;gap:30px}.footer-brand{color:white;font-size:21px;font-weight:700}.footer-note{font-size:13px;max-width:420px}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;font-size:12px;display:flex;justify-content:space-between}
+    .wa{position:fixed;right:22px;bottom:22px;width:56px;height:56px;border-radius:50%;background:#1f9d55;color:white;display:grid;place-items:center;font-size:26px;box-shadow:0 8px 25px rgba(0,0,0,.2);z-index:30}
+    .mobile{display:none}
+    @media(max-width:850px){
+      .navlinks{display:none}.mobile{display:block;background:none;border:0;color:white;font-size:26px}
+      .hero-grid,.about,.contact{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}
+      .cta{padding:35px;display:block}.cta .btn{margin-top:22px}.hero{padding:65px 0}
+    }
+    @media(max-width:560px){
+      section{padding:60px 0}.services,.process,.two,.points{grid-template-columns:1fr}
+      .section-head h2,.about h2,.contact h2{font-size:34px}.hero h1{font-size:48px}
+      .footer-top,.footer-bottom{display:block}.footer-bottom div+div{margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">
+        <div class="bee">🐝</div>
+        <div><div class="brand-name">AccountingBee</div><small>Your Finances, Our Expertise</small></div>
+      </a>
+      <div class="navlinks">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+        <a class="btn btn-gold" href="#contact">Get in Touch</a>
+      </div>
+      <button class="mobile" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Chartered Accountant • Accounting • Tax & Compliance</div>
+      <h1>Your Finances.<br><span style="color:var(--gold2)">Our Expertise.</span></h1>
+      <p>Professional accounting, taxation, bookkeeping and compliance support for individuals, entrepreneurs and growing businesses.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contact">Book a Consultation</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>One trusted partner for your finances</h3>
+      <div class="check"><b>✓</b> GST & Income Tax Compliance</div>
+      <div class="check"><b>✓</b> Bookkeeping & Monthly Accounts</div>
+      <div class="check"><b>✓</b> Payroll, EPFO & ESIC Support</div>
+      <div class="check"><b>✓</b> Business Registration & Advisory</div>
+      <div class="check"><b>✓</b> Practical, business-focused support</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="soft">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Professional services, without the complexity.</h2>
+      <p>From day-to-day bookkeeping to statutory compliance, AccountingBee helps you keep your financial operations organised and compliant.</p>
+    </div>
+    <div class="services">
+      <div class="card"><div class="icon">₹</div><h3>Income Tax & ITR</h3><p>Income tax return filing, tax support and practical guidance for individuals and businesses.</p></div>
+      <div class="card"><div class="icon">GST</div><h3>GST Services</h3><p>GST registration, return filing, reconciliation and ongoing compliance assistance.</p></div>
+      <div class="card"><div class="icon">▤</div><h3>Bookkeeping</h3><p>Accurate books, bank reconciliation, expense classification and monthly financial reporting.</p></div>
+      <div class="card"><div class="icon">▦</div><h3>Payroll & Compliance</h3><p>Payroll support along with EPFO, ESIC, professional tax and related compliance.</p></div>
+      <div class="card"><div class="icon">◈</div><h3>Business Registrations</h3><p>Support for proprietorships, companies, LLPs, MSME and other business registrations.</p></div>
+      <div class="card"><div class="icon">↗</div><h3>Accounting Advisory</h3><p>Accounting systems, software migration, process improvement and business finance support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div class="about-panel">
+      <div class="big">14+</div>
+      <p style="font-size:20px;margin:10px 0 28px">years of professional experience</p>
+      <div style="height:1px;background:rgba(255,255,255,.16);margin-bottom:22px"></div>
+      <p style="color:#d8e1eb">AccountingBee combines professional accounting knowledge with practical experience across multiple regions and business environments.</p>
+    </div>
+    <div>
+      <div class="eyebrow">About AccountingBee</div>
+      <h2>Finance should help your business move forward.</h2>
+      <p>AccountingBee is a professional accounting and compliance practice founded by <strong>Aditee Agrawal, Chartered Accountant</strong>.</p>
+      <p>Our approach is simple: understand the business, keep the numbers organised, meet compliance requirements and provide clear financial support when decisions need to be made.</p>
+      <div class="points">
+        <div class="point">Professional CA-led support</div>
+        <div class="point">Business-focused approach</div>
+        <div class="point">Accounting & compliance under one roof</div>
+        <div class="point">Clear communication & practical guidance</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="soft">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Our Process</div><h2>Simple from start to finish.</h2></div>
+    <div class="process">
+      <div class="step"><div class="num">01</div><h3>Understand</h3><p>We understand your business, requirements and current situation.</p></div>
+      <div class="step"><div class="num">02</div><h3>Plan</h3><p>We identify the right compliance and accounting workflow.</p></div>
+      <div class="step"><div class="num">03</div><h3>Execute</h3><p>We handle the agreed accounting, filing or registration work.</p></div>
+      <div class="step"><div class="num">04</div><h3>Support</h3><p>We keep you informed and support ongoing requirements.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <div><h2>Let's make your finances simpler.</h2><p>Tell us what you need and we'll help you understand the next step.</p></div>
+      <a class="btn btn-gold" href="#contact">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="soft">
+  <div class="container contact">
+    <div>
+      <div class="eyebrow">Contact AccountingBee</div>
+      <h2>Let's talk about your business.</h2>
+      <p style="color:var(--muted)">Use the enquiry form and we'll get back to you. Replace the placeholder contact details below with your actual phone number and email before publishing.</p>
+      <div class="contact-box">
+        <div class="contact-row"><div>📍</div><div><strong>Location</strong><span>Udaipur, Rajasthan, India</span></div></div>
+        <div class="contact-row"><div>✉</div><div><strong>Email</strong><span>caaditimor@gmail.com</span></div></div>
+        <div class="contact-row"><div>☎</div><div><strong>Phone / WhatsApp</strong><span>+91 8824292218</span></div></div>
+      </div>
+    </div>
+    <div>
+      <form onsubmit="sendEnquiry(event)">
+        <div class="two"><input id="name" required placeholder="Your name"><input id="phone" required placeholder="Phone / WhatsApp"></div>
+        <input id="email" type="email" placeholder="Email address">
+        <select id="service"><option value="">Select a service</option><option>GST</option><option>Income Tax / ITR</option><option>Bookkeeping</option><option>Payroll / EPFO / ESIC</option><option>Business Registration</option><option>Accounting Advisory</option></select>
+        <textarea id="message" placeholder="Tell us briefly what you need"></textarea>
+        <button class="btn btn-gold" type="submit">Send Enquiry on WhatsApp</button>
+        <small style="color:var(--muted)">The button opens WhatsApp with your enquiry. Add your WhatsApp number in the script before publishing.</small>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div><div class="footer-brand">AccountingBee</div><div style="font-size:12px;color:#d8b65c;margin-top:4px">Your Finances, Our Expertise</div></div>
+      <div class="footer-note">Professional accounting, taxation, bookkeeping and compliance services for individuals and businesses.</div>
+    </div>
+    <div class="footer-bottom"><div>© <span id="year"></span> AccountingBee. All rights reserved.</div><div>Designed for AccountingBee</div></div>
+  </div>
+</footer>
+
+<a class="wa" href="#" onclick="openWhatsApp(event)" aria-label="WhatsApp">◉</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // IMPORTANT: Replace the number below with your WhatsApp number, country code included, without + or spaces.
+  const WHATSAPP_NUMBER = "918824292218";
+
+  function openWhatsApp(e){
+    e.preventDefault();
+    if(WHATSAPP_NUMBER.includes("X")) {
+      alert("Please add your WhatsApp number in the WHATSAPP_NUMBER setting inside index.html before publishing.");
+      return;
+    }
+    window.open("https://wa.me/" + WHATSAPP_NUMBER, "_blank");
+  }
+
+  function sendEnquiry(e){
+    e.preventDefault();
+    if(WHATSAPP_NUMBER.includes("X")) {
+      alert("Please add your WhatsApp number in the WHATSAPP_NUMBER setting inside index.html before publishing.");
+      return;
+    }
+    const name=document.getElementById('name').value;
+    const phone=document.getElementById('phone').value;
+    const email=document.getElementById('email').value;
+    const service=document.getElementById('service').value;
+    const message=document.getElementById('message').value;
+    const text=`Hello AccountingBee,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AService: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message)}`;
+    window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+text, "_blank");
+  }
+</script>
+</body>
+</html>
